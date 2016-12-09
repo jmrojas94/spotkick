@@ -54,7 +54,7 @@
           success: function(response) {
             var songs = response.items;
             var albums = response.items.album
-            
+
             for (var i = 0; i < songs.length; i++) {
               $(userTopTracksPlaceholder).append(userTopTracksTemplate(songs[i]))
             }
@@ -91,7 +91,7 @@
     //   })
     // })
 
-    
+
 
     document.getElementById('obtain-new-token').addEventListener('click', function() {
       $.ajax({
@@ -109,3 +109,31 @@
     }, false);
   }
 })();
+
+
+
+
+
+
+
+   var eventSearch = function(req, res) {
+      request("http://api.jambase.com/events?zipCode=95128&radius=50&page=0&api_key=gy7rjt66uh2d6qedy36nph5f")
+    }
+
+    var jamBase = require('node-jambase')
+    var client = new jamBase(gy7rjt66uh2d6qedy36nph5f)
+    var today = new Date().toISOString();
+    var endDate = new Date();
+    endDate.setDate(endDate.getDate() + 30);
+    endDate = endDate.toISOString();
+
+
+
+
+
+
+
+
+
+
+

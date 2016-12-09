@@ -1,10 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <title>Example of the Authorization Code flow with Spotify</title>
+<!--     <title>Example of the Authorization Code flow with Spotify</title> -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-	<script type="text/javascript">navigator.geolocation.getCurrentPosition(function(response){console.log(response)})</script>
+	<script type="text/javascript">
+
+    long = 0
+    lat = 0
+    navigator.geolocation.getCurrentPosition(function(response){
+      long = response.coords.longitude;
+      lat = response.coords.latitude;
+      console.log(response);
+    })
+
+  </script>
   </head>
 
   <body>
@@ -23,7 +33,7 @@
         <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
 
         <a class="btn btn-danger" href="/logout">Logout</a>
-        
+
       </div>
     </div>
 
@@ -41,8 +51,8 @@
       </div>
     </script>
 
-    <script id="top-tracks-template" type="text/x-handlebars-template">   
-      <div class="single-track"> 
+    <script id="top-tracks-template" type="text/x-handlebars-template">
+      <div class="single-track">
         <a class="song-preview" data-song-url="{{preview_url}}"><img src="{{album.images.1.url}}"></a>
         <h3>"{{ name }}" {{ artists.name }}</h3>
         <h4>Album: {{ album.name }}</h4>
@@ -57,7 +67,7 @@
       </dl> -->
     </script>
 
-    
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
