@@ -1,0 +1,31 @@
+
+
+body {
+        background: #191414;
+        color: white;
+      }
+      .container {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .single-track {
+        width: 35%;
+        margin: 10px;
+        color: #191414;
+        display: inline-block;
+        padding: 10px;
+        border: 2px solid white;
+        border-radius: 5px;
+        background: white;
+      }
+      #login, #loggedin {
+        display: none;
+      }
+      .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 500px;
+      }
